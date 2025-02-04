@@ -123,6 +123,7 @@ header .container {
 .cta-button {
     display: inline-block;
     padding: 12px 24px;
+    background-color: var(--color-secondary);
     color: var(--color-dark);
     text-decoration: none;
     border-radius: 30px;

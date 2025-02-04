@@ -101,9 +101,7 @@ ctaButton.addEventListener('click', () => {
 // ==========================
 
 // Sistema de carrito principal
-// ==========================
-// MEJORAS PARA LA LÓGICA DEL CARRITO
-// ==========================
+
 
 let cartItems = [];
 let cartTotal = 0;
@@ -168,7 +166,7 @@ function showPurchaseModal() {
     modal.innerHTML = `
         <div class="modal-content">
             <h3>🎉 Compra exitosa!</h3>
-            <p>Productos adquiridos: ${existingItem.quantity}</p>
+            <p>Productos adquiridos: ${cartItems.quantity}</p>
             <p>Total pagado: $${cartTotal.toFixed(2)}</p>
             <button onclick="this.parentElement.parentElement.remove()">Cerrar</button>
         </div>
