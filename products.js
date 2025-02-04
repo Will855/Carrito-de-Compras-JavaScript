@@ -66,8 +66,8 @@ gsap.from(".product-card", {
         scrub: 0.3 // Suaviza la animación mientras se hace scroll
     },
     y: 100,
-    opacity: 0.5,
-    stagger: 1 // Aplica un retraso entre las animaciones de cada tarjeta
+    stagger: 1, // Aplica un retraso entre las animaciones de cada tarjeta
+    opacity: 0.5
 });
 
     initAddToCartButtons();
