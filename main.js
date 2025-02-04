@@ -153,7 +153,8 @@ function checkout() {
         showFeedback('¡El carrito está vacío!');
         return;
     }
-
+    console.log(cartItems);
+    
     showPurchaseModal();
     cartItems = [];
     cartTotal = 0;

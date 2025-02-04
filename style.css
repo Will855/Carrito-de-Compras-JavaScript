@@ -123,7 +123,6 @@ header .container {
 .cta-button {
     display: inline-block;
     padding: 12px 24px;
-    background-color: var(--color-secondary);
     color: var(--color-dark);
     text-decoration: none;
     border-radius: 30px;
@@ -164,16 +163,20 @@ h2::after {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+    will-change: transform; /* Mejora rendimiento */
 }
 
 .product-card {
     background-color: rgba(84, 131, 179, 0.1);
     border-radius: 10px;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
     position: relative;
+    backface-visibility: hidden; /* Evita flickering */
+    transform: translateZ(0);
 }
 
 .product-card:hover {
@@ -232,8 +235,6 @@ h2::after {
     position: fixed;
     top: 0;
     right: -500px;
-    width: 100%;
-    max-width: 400px;
     height: 100vh;
     background-color: var(--color-primary);
     padding: 20px;
@@ -328,9 +329,6 @@ h2::after {
         font-size: 2rem;
     }
 
-    .cart-panel {
-        width: 100%;
-    }
 }
 
 @media (max-width: 480px) {
@@ -347,5 +345,4 @@ h2::after {
         font-size: 1rem;
     }
 
-    
 }
